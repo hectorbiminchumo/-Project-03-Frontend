@@ -140,6 +140,23 @@ REPETIMOS EL MISMO PROCESO PARA BOOKUSED
     Se da diseno
     Se usa useEffect
 
+    8. DESPLEGAR EN NETLIFY
+    
+        a. Se crea en public un archivo _redirects con esta informacion:
+    
+        /*  /index.html  200
+
+        Este archivo es para ejecutar correctamente el create-react-app en Netlify
+
+        b. Proceso de despliegue:
+            - Add new site / important an existing project
+            - Provider Github
+            - Select a project
+            - Build command: CI= npm run build
+            - Show advance/ new variable
+                key: REACT_APP_BACKEND_URL
+                value: https://only-books-project.herokuapp.com/
+            - Deploy site
 
    
 

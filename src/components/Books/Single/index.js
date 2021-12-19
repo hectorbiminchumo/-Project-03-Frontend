@@ -9,6 +9,7 @@ export default function Single() {
   const { getBook, singleBook } = ctx;
   const params = useParams();
   const id = params.id;
+  // con params se obtiene el id del libro
   useEffect(() => {
     getBook(id);
   }, []);
@@ -52,12 +53,7 @@ export default function Single() {
                   </li>
                   <li>
                     <div className="flex items-center text-sm">
-                      <Link
-                        to="/books"
-                        className="font-medium text-gray-500 hover:text-gray-900"
-                      >
-                        Eléctricas
-                      </Link>
+                      
                     </div>
                   </li>
                 </ol>

@@ -63,11 +63,7 @@ export default function Books() {
                             {element.title}
                           </Link>
                         </h3>
-                        <div class="mt-3 flex flex-col items-center">
-                          <p class="mt-1 text-sm text-gray-500">
-                            {element.description}
-                          </p>
-                        </div>
+                        
                         <p class="mt-4 text-base font-medium text-gray-900">
                           ${element.price}
                         </p>

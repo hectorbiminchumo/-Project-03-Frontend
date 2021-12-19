@@ -99,7 +99,7 @@ REPETIMOS EL MISMO PROCESO PARA BOOKUSED
 
     c. importar BookReducer al BookState
 
-4. Componente Books index.js
+4. Componente Books/ index.js
     a. importar de react useEffect y useContext, contexto
         Estado Global
         Se genera una variable ctx que es igual al BookContext
@@ -110,3 +110,37 @@ REPETIMOS EL MISMO PROCESO PARA BOOKUSED
 
 
         payload: son los datos reales que voy a utilizar para cambiar el valor del estado global
+
+5. Crear archivo Axios.js
+    Axios = libreria para hacer llamadas API hacia servidores
+    instalar npm install axios
+    a. Configurar axios
+        importacion de axios
+        axios.create
+        export axiosClient
+
+    PARA QUE OBTENGA LOS DATOS EN EL NAVEGADOR, EN EL BACKEND (SERVER) Instalar esta libreria npm install cors
+
+    EN EL SERVER, INDEX.JS MIDDLEWARE
+    // HABILITAR CORS (ACCESOS DE AMBIENTES DE DESARROLLO DE TERCEROS)
+   app.use(cors())
+   
+   Permite flexibilizar el servidor
+
+   el onclick de books/index.js sirve solo para ver en la consola lo que devuelve getbooks(res)
+
+   CREAR COMPONENTE PARA LA VISTA DE UN LIBRO
+   CREAR COMPONENTE PARA LA VISTA DE UN LIBRO USADO
+
+   6. Se crea funcion para obtener libro individual en BookState.js
+
+   7. En Books/single/index.js
+    Se importa useParams
+    Se hace una prueba con onClick
+    Se da diseno
+    Se usa useEffect
+
+
+   
+
+        

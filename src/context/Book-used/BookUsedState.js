@@ -44,6 +44,7 @@ const BookUsedState = (props) => {
 		const res = await axiosClient.get("booksUsed/readall")
 
 		console.log("Getting used books...")
+		console.log(res);
 		
 		const list = res.data.data
 

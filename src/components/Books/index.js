@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Books() {
   // ESTADO GLOBAL
   const ctx = useContext(BookContext);
-console.log(ctx);
+
   const { books, hola, changeText, getBooks } = ctx;
 
   // ESTADO LOCAL
@@ -19,8 +19,8 @@ console.log(ctx);
 
   return (
     <>
-    <button onClick={ ()=> {changeText()}}>
-        cambiar texto
+    <button onClick={ ()=> {getBooks()}}>
+        listar libros
     </button>
       <div className="max-w-7xl mx-auto my-8 px-4 sm:px-6 lg:px-8">
         <div class="md:flex md:items-center md:justify-between">

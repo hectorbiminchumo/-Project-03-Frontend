@@ -42,8 +42,8 @@ const BookState = (props) => {
 	const getBooks = async () => {
 
 		const res = await axiosClient.get("books/readall")
-
 		console.log("Getting books...")
+		console.log(res);
 		
 		const list = res.data.data
 

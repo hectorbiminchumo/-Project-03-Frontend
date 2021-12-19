@@ -4,17 +4,17 @@ const reducer = (globalState, action) => {
 
 	switch (action.type) {
 
-		case "GET_BOOK":
-		case "UPDATE_BOOKS":
+		case "GET_BOOKUSED":
+		case "UPDATE_BOOKUSED":
 			return {
 				...globalState,
-				singleBook: action.payload
+				singleBookUsed: action.payload
 			}
 
-		case "GET_BOOKS":
+		case "GET_BOOKSUSED":
 			return {
 				...globalState,
-				books: action.payload
+				booksUsed: action.payload
 			}
 
 		case "CHANGE_TEXT":

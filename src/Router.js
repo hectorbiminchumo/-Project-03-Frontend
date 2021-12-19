@@ -10,6 +10,9 @@ import Login from './components/Auth/Login'
 
 import Books from './components/Books'
 import BooksUsed from './components/BooksUsed'
+import Single from './components/Books/Single'
+import SingleUsed from './components/BooksUsed/SingleUsed'
+
 
 
 import BookState from './context/Book/BookState'
@@ -35,8 +38,13 @@ const Router = () => {
 							<Route path="iniciar-sesion" element={<Login/>}/>
 							{/* localhost:3000/books */}
 							<Route path="books" element={<Books/>}/>
+							{/* localhost:3000/books/:id */}
+							<Route path="books/:id" element={<Single/>}/>
 							{/* localhost:3000/booksUsed */}
 							<Route path="booksUsed" element={<BooksUsed/>}/>
+							{/* localhost:3000/booksUsed/:id */}
+							<Route path="booksUsed/:id" element={<SingleUsed/>}/>
+							
 						
 
 						</Route>

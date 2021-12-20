@@ -1,9 +1,26 @@
 // ./client/src/Layout/Header.js
 import React, {useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
+import UserContext from '../../context/User/UserContext'
+
 
 
 export default function Header() {
+
+
+    const ctx = useContext(UserContext)
+
+    const {
+        currentUser,
+        verifyingToken
+
+    } = ctx
+    
+    useEffect(()=>{
+      verifyingToken()
+    },[])
+
+
 
 	return (
 		<header className="bg-black">
@@ -66,12 +83,19 @@ export default function Header() {
           </button>
 
           <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-						{/* { */}
-							{/* currentUser.nombre ? */}
-
-								<Link to="/profile" className="text-base font-medium text-white hover:text-indigo-50">
-									Tu perfil
+						{
+							currentUser.firstName ?
+              <>
+								<Link to="/profile" className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700">
+									Profile
 								</Link>
+                
+
+                <Link to="/" class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700">
+										Logout
+									</Link>
+
+               </> 
 								:
 								<>
 									<Link to="/registro" class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700">
@@ -81,7 +105,7 @@ export default function Header() {
 										Iniciar sesión
 									</Link>
 								</>
-						{/* } */}
+						}
 
 					</div>
 

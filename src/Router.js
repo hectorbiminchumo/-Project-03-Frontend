@@ -14,6 +14,7 @@ import Single from './components/Books/Single'
 import SingleUsed from './components/BooksUsed/SingleUsed'
 import Create from './components/Books/Create'
 import CreateUsed from './components/BooksUsed/CreateUsed'
+import EditBook from './components/Books/Single/Edit'
 
 
 
@@ -44,6 +45,8 @@ const Router = () => {
 							<Route path="books/:id" element={<Single/>}/>
 							{/* localhost:3000/books/crear */}
 							<Route path="books/crear" element={<Create/>}/>
+							{/* localhost:3000/books/edit */}
+							<Route path="books/:id/editar" element={<EditBook/>}/>
 							{/* localhost:3000/booksUsed */}
 							<Route path="booksUsed" element={<BooksUsed/>}/>
 							{/* localhost:3000/booksUsed/:id */}

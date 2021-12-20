@@ -221,5 +221,32 @@ REPETIMOS EL MISMO PROCESO PARA BOOKUSED
         b. git pull origin master (trae los cambios de github y actualiza. Fusion fast forward)
     
     ---------------------------------
+EDITAR LIBRO
+
+1. Crear ruta books/:id/editar
+2. Crear componente Edit en Single
+ESTADO GLOBAL
+Utilizo los parametros para obterner el ID de la guitarra, genero un contexto bookcontext
+singleBook, getBook(Para hacer una actualizacion del book en la que estamos en la pagina), updateBook (cambiar datos con el put) = ctx
+ESTADO LOCAL
+FUNCIONES
+RETORNO
+
+
+
+
+3. Capturar datos de ESTADO LOCAL con useState
+4. Funciones setBookdata, se llaman los datos con el spread operator y se modifican con target
+5. Se verifica en Components si ya cambia el estado cuando se digitan datos
+6. Al inicio de funciones, aplicar useEffect
+    a. Funcion de actualizacion
+    b. 
+7. Estado global   
+
+
+
+
+Crear UpdateGuitar en state
+
 
        

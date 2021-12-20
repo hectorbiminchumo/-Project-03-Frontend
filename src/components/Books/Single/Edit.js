@@ -1,30 +1,58 @@
-// ./new-client/src/components/Guitars/Create.js
+//./src/components/Guitars/Single/Edit.js
 
-import React, { useState, useContext } from "react";
-import BookUsedContext from "./../../context/Book-used/BookUsedContext";
+import React, { useState, useContext, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import BookContext from "../../../context/Book/BookContext";
 
-export default function Create() {
+export default function Edit() {
   // 1. ESTADO GLOBAL
-  const ctx = useContext(BookUsedContext);
-  const { createBookUsed } = ctx;
+  const params = useParams();
+  const idBook = params.id;
+
+  const ctx = useContext(BookContext);
+console.log(ctx);
+
+  const { singleBook, getBook, updateBook } = ctx;
 
   // 2. ESTADO LOCAL
-  const [newBookUsed, setNewBookUsed] = useState({
+
+  const [bookData, setBookData] = useState({
     title: "",
     author: "",
     description: "",
-    price: "",
     image: "",
+    price: "",
     condition: "",
     pages: "",
   });
 
   // 3. FUNCIONES
+
+  // USEEFFECT PARA ACTUALIZAR DATOS EN EL ESTADO GLOBAL
+  useEffect(() => {
+    getBook(idBook);
+  }, []);
+
+  // USEEFFECT PARA ACTUALIZAR LOS DATOS DEL ESTADO GLOBAL AL ESTADO LOCAL
+  useEffect(() => {
+    const { title, author, description, image, price, condition, pages } = ctx.singleBook;
+
+    setBookData({
+      title: title,
+      author: author,
+      description: description,
+      image: image,
+      price: price,
+      condition: condition,
+      pages:pages
+    });
+  }, [singleBook]);
+
   const handleChange = (e) => {
     e.preventDefault();
 
-    setNewBookUsed({
-      ...newBookUsed,
+    setBookData({
+      ...bookData,
       [e.target.name]: e.target.value,
     });
   };
@@ -32,7 +60,7 @@ export default function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    createBookUsed(newBookUsed);
+    updateBook(bookData, idBook)
   };
 
   return (
@@ -46,9 +74,9 @@ export default function Create() {
           <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>
               <h3 class="text-lg leading-6 font-medium text-gray-900">
-                Book Information
+                Edit Book
               </h3>
-              <p class="mt-1 text-sm text-gray-500">.</p>
+              
             </div>
 
             <div class="grid grid-cols-6 gap-6">
@@ -65,6 +93,7 @@ export default function Create() {
                   }}
                   type="text"
                   name="title"
+                  value={bookData.title}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -81,32 +110,33 @@ export default function Create() {
                   }}
                   type="text"
                   name="author"
+                  value={bookData.author}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
-              <div class="col-span-6 sm:col-span-3">
+              <div class="col-span-6 sm:col-span-6 lg:col-span-4">
                 <label
-                  for="first-name"
+                  for="city"
                   class="block text-sm font-medium text-gray-700"
                 >
                   Description
                 </label>
-                <input
+                <textarea
                   onChange={(event) => {
                     handleChange(event);
                   }}
                   type="text"
+                  value={bookData.description}
                   name="description"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-6 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
-
               <div class="col-span-6 sm:col-span-3">
                 <label
                   for="last-name"
                   class="block text-sm font-medium text-gray-700"
                 >
-                  Price (USD)
+                  Precio (USD)
                 </label>
                 <input
                   onChange={(event) => {
@@ -114,9 +144,11 @@ export default function Create() {
                   }}
                   type="number"
                   name="price"
+                  value={bookData.price}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
+
               <div class="col-span-6 sm:col-span-4">
                 <label
                   for="country"
@@ -131,11 +163,8 @@ export default function Create() {
                   name="condition"
                   class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 >
-                  <option value={"Used"}>Used</option>
-                  {/* <option value={"New"}>
-										New
-									</option>
-									<option value={"Used"}>Used</option> */}
+                  <option value={"New"}>New</option>
+                  
                 </select>
               </div>
 
@@ -152,6 +181,7 @@ export default function Create() {
                   onChange={(event) => {
                     handleChange(event);
                   }}
+                  value={bookData.image}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -169,9 +199,12 @@ export default function Create() {
                   }}
                   type="number"
                   name="pages"
+                  value={bookData.pages}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
+
+            
             </div>
           </div>
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -179,7 +212,7 @@ export default function Create() {
               type="submit"
               class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              Save
+              Save Book
             </button>
           </div>
         </div>

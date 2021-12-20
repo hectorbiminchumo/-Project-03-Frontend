@@ -51,14 +51,7 @@ export default function SingleUsed() {
                     </div>
                   </li>
                   <li>
-                    <div className="flex items-center text-sm">
-                      <Link
-                        to="/booksUsed"
-                        className="font-medium text-gray-500 hover:text-gray-900"
-                      >
-                        Eléctricas
-                      </Link>
-                    </div>
+                  
                   </li>
                 </ol>
               </nav>
@@ -73,7 +66,7 @@ export default function SingleUsed() {
                 </h2>
                 <div className="flex items-center">
                   <p className="text-lg text-gray-900 sm:text-xl">
-                    MXN ${singleBookUsed.price}
+                    USD ${singleBookUsed.price}
                   </p>
                   <div className="ml-4 pl-4 border-l border-gray-300">
                     <h2 className="sr-only">Reviews</h2>

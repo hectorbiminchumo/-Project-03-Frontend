@@ -225,11 +225,21 @@ EDITAR LIBRO
 
 1. Crear ruta books/:id/editar
 2. Crear componente Edit en Single
+3. Dividir en:
+
 ESTADO GLOBAL
 Utilizo los parametros para obterner el ID de la guitarra, genero un contexto bookcontext
-singleBook, getBook(Para hacer una actualizacion del book en la que estamos en la pagina), updateBook (cambiar datos con el put) = ctx
+singleBook, getBook(Para hacer una actualizacion del book en el que estamos en la pagina), updateBook (cambiar datos con el put) = ctx
+
+Desestructuracion de objetos para el book individual
+
 ESTADO LOCAL
+bookData, setBookData = useState({propiedades})
+
 FUNCIONES
+useEffect- primer argumento funcion, segundo un arreglo
+    Funcion de actualizacion
+
 RETORNO
 
 
@@ -243,10 +253,70 @@ RETORNO
     b. 
 7. Estado global   
 
-
+Dos useEffect
+    1. Que se ejecuta para capturar los datos del estado global
+    2. Se ejecuta cuando detecta un cambio en el singleBook
 
 
 Crear UpdateGuitar en state
 
 
+LOGIN, REGISTER USER
+
+REGISTER.JS
+1. Importamos el contexto, 
+    1.1. UseState, pasamos los valores
+2. En funciones, 
+const handleChange, 
+    setNewUser se le pasa el spread operator y se hace el cambio con target
+
+
+const handleSubmit
+    registerUser
+
+3. Retorno
+    a. Dentro de la etiqueta form pasamos el onsubmit
+    b. En cada input pasarle onchange con handleChange   
+
+4. En context crear la carpeta para User (UserContext, UserReduce, UserState)
+    a. UserState.js
+        1. Initial State
+        2. Configuracion del Reducer
+        3. Funciones
+            registerUser
+        Retorno
+5. En Router colocar el <userState> </userState>
+
+6. En el UserReducer.js
+    a. Hacemos el switch para validar token
+        localStorage guarda el token en la bd del navegador
+        action.payload=token
+
+
+LOGIN
+1. En Login.js establecer estado local
+    useState({email:"", password:""})
+    handleChange
+    handleSubmit
+    en el return colocar el handleChange y handleSubmit
+        Definir el context en una variable
+            Desestructurar loginUser
+2. Em UserState.js definir la funcion loginUser
+
+
+VERIFICAR TOKEN
+
+1. En UserState.js
+    a. Para sacar el dato del navegador: localStorage.getItem("token")
+    b. Verificamos si el token existe
+        axiosClient.defaults.headers.common["x-auth-token"]=token
+        si no existe
+        delete axiosClient.defaults.headers.common["x-auth-token"]
+        se hace un try/catch donde se obtiene la informacion del usuario
+    c. En el UserReducer.js,  anadir en el switch Get_data_user
+    d. En el UserState se agrega en retorno la funcion verifingToken
+
+
+AUTENTICACION
+Redireccionar al area privada del perfil
        

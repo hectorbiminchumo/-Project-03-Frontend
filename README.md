@@ -319,4 +319,13 @@ VERIFICAR TOKEN
 
 AUTENTICACION
 Redireccionar al area privada del perfil
-       
+
+EN context crear carpeta routes y archivos:
+    Auth.js
+    Private.js
+    Se generan condicionales relacionadas a si el usuario esta loggeado o no
+
+En Router.js
+    importar Auth
+    Rutas de autenticacion: evitan que un usuario loggeado pueda entrar a register y a login
+    element= <Auth component = {Register} />

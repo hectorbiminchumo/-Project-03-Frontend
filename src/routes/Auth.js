@@ -9,7 +9,7 @@ export default function AuthRoute({ component: Component, ...props }) {
     const userCtx = useContext(UserContext)
     
     const { authStatus, verifyingToken } = userCtx
-
+console.log(userCtx);
     const [loading, setLoading] = useState(true)
 
     useEffect(async () => {
@@ -22,7 +22,7 @@ export default function AuthRoute({ component: Component, ...props }) {
 		<>
 			{
 				authStatus ?
-				(<Navigate replace to="/" />)
+				(<Navigate replace to="/profile" />)
 				:
 				(<Component/>)
 			}

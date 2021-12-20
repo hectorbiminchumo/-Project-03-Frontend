@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import BookContext from "../../../context/Book/BookContext";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 export default function Single() {
   
   const ctx = useContext(BookContext);
-  const { getBook, singleBook } = ctx;
+  const { getBook, singleBook, deleteBook } = ctx;
   const params = useParams();
   const id = params.id;
   // con params se obtiene el id del libro
@@ -25,6 +25,16 @@ export default function Single() {
               Editar book
             </button>
           </Link>
+        </div>
+        <div class="mt-4 flex md:mt-0">
+          
+            <button onClick={() => deleteBook(id)}
+              type="button"
+              class="ml-3 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Delete book
+            </button>
+          
         </div>
 
         <div className="bg-white">

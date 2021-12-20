@@ -12,6 +12,8 @@ import Books from './components/Books'
 import BooksUsed from './components/BooksUsed'
 import Single from './components/Books/Single'
 import SingleUsed from './components/BooksUsed/SingleUsed'
+import Create from './components/Books/Create'
+import CreateUsed from './components/BooksUsed/CreateUsed'
 
 
 
@@ -40,11 +42,14 @@ const Router = () => {
 							<Route path="books" element={<Books/>}/>
 							{/* localhost:3000/books/:id */}
 							<Route path="books/:id" element={<Single/>}/>
+							{/* localhost:3000/books/crear */}
+							<Route path="books/crear" element={<Create/>}/>
 							{/* localhost:3000/booksUsed */}
 							<Route path="booksUsed" element={<BooksUsed/>}/>
 							{/* localhost:3000/booksUsed/:id */}
 							<Route path="booksUsed/:id" element={<SingleUsed/>}/>
-							
+							{/* localhost:3000/booksUsed/crear */}
+							<Route path="booksUsed/crear" element={<CreateUsed/>}/>
 						
 
 						</Route>

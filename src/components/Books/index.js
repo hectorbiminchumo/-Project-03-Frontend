@@ -69,6 +69,13 @@ export default function Books() {
                           ${element.price} USD
                         </p>
                       </div>
+
+                      <div class="image-cart">
+            <Link to="/books/crear">
+              <img src="https://westwooddigitalmarketing.com/wp-content/uploads/2013/04/517f8532e771cc40edabf236946d4be7d84a9_640.jpg"/>
+            </Link>
+          </div>
+
                     </div>
                   </div>
                 </>

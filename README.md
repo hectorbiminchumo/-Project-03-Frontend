@@ -225,11 +225,21 @@ EDITAR LIBRO
 
 1. Crear ruta books/:id/editar
 2. Crear componente Edit en Single
+3. Dividir en:
+
 ESTADO GLOBAL
 Utilizo los parametros para obterner el ID de la guitarra, genero un contexto bookcontext
-singleBook, getBook(Para hacer una actualizacion del book en la que estamos en la pagina), updateBook (cambiar datos con el put) = ctx
+singleBook, getBook(Para hacer una actualizacion del book en el que estamos en la pagina), updateBook (cambiar datos con el put) = ctx
+
+Desestructuracion de objetos para el book individual
+
 ESTADO LOCAL
+bookData, setBookData = useState({propiedades})
+
 FUNCIONES
+useEffect- primer argumento funcion, segundo un arreglo
+    Funcion de actualizacion
+
 RETORNO
 
 

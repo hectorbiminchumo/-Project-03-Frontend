@@ -158,6 +158,68 @@ REPETIMOS EL MISMO PROCESO PARA BOOKUSED
                 value: https://only-books-project.herokuapp.com/
             - Deploy site
 
+    9. CREAR LIBROS
+        a. Crear ruta en Router.js 
+            1. Importar Books
+            2. Crear ruta /crear
+        b. Crear componente Create.js
+            rfc
+            b.1 Se agrega formulario
+            Usaremos el useState y contexto
+            
+            En la funcion trabajamos con:
+
+            //1. Estado global
+            definimos una variable igual al contexto de book, hacemos una desestructuracion
+
+            //2. Estado local 
+            Desestructuracion de la informacion de un libro, el valor inicial de useState es un objeto 
+
+            onChange.- evento monitorea el cambio de texto en un campo 
+
+            handleChange.- sirve para capturar por parte del dom los datos del formulario
+
+            En funciones, 
+            definir el handleChange, se establece el cambio en el estado local, 
+            
+            setNewBook
+                con spread operator llamar las propiedades de newBook. El target se refiere a los inputs, cambio de propiedades en el objeto dinamico.
+
+            //3. En BookState, se define la funcion createBook
+
+
+            //4. En el tag form se agrega onSubmit que ejecute un handleSubmit
+
+                Crear handleSubmit
+                    Se invoca createBook(NewBook)
+
+    10. En Book/index.js
+        useEffect.- hook que permite monitorear cambioas de una variable, todos los eventos que vengan fuera del navegador
+        Tiene dos argumentos (funcion,[] Cuando hay un arreglo vacio significa que se ejecuta una vez)
+        Luego del return(renderizado) se ejecuta el useEffect, si hay cambios React renderiza nuevamente.
    
 
-        
+   ---------------------------------
+   TRABAJO CON RAMAS
+   1. CREAR RAMA
+        a. git checkout -b "nombre"
+            se hacen los cambios
+        b. git add -A
+        c. git commit -m "comentario"
+        d. git push origin "nombre"
+    2. SUBIR CAMBIOS
+        a. pull request/ new pull request
+        b. base: master   compare: "nombre"  create pull request(x2)
+        c. inspector deploy log
+    3. MERGE
+        a. Pull request/ abrir cambio
+        b. Merge pull request
+        c. Verificar en Netlify lo que se obtiene
+        d. Confirmar Merge
+    4. FUSION LOCAL
+        a. En VSC cambiar a rama de master: git checkout master
+        b. git pull origin master (trae los cambios de github y actualiza. Fusion fast forward)
+    
+    ---------------------------------
+
+       

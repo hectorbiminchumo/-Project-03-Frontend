@@ -56,7 +56,7 @@ const BookState = (props) => {
 
 	const getBook = async (bookId) => {
 		
-		console.log(bookId)
+		console.log("Este es el id", bookId)
 
 		const res = await axiosClient.get(`books/readone/${bookId}`)
 

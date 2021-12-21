@@ -76,6 +76,8 @@ const BookState = (props) => {
 		const res = await axiosClient.post("books/create", form)
 
 		console.log(res)
+		
+    	window.location.replace('/books');
 
 	}
 
@@ -89,6 +91,8 @@ const BookState = (props) => {
 			type: "UPDATE_BOOK",
 			payload: updatedBook
 		})
+		alert('Saved Changes!');
+    	window.location.replace('/books');
 
 
 	}
@@ -96,7 +100,7 @@ const BookState = (props) => {
 	const deleteBook = async (idBook) => {
 
 		const res = await axiosClient.delete(`books/delete/${idBook}` )
-
+		window.location.replace('/books');
 	}
 
 

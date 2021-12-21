@@ -86,11 +86,14 @@ const BookUsedState = (props) => {
 
 		const updatedBookUsed = res.data.data
 
+		
+
 		dispatch({
 			type: "UPDATE_BOOKUSED",
 			payload: updatedBookUsed
 		})
 
+		
 
 	}
 

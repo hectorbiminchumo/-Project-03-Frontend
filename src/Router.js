@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 import Register from './components/Auth/Register'
 import Login from './components/Auth/Login'
 import Profile from './components/User/profile'
+import Cart from './components/Cart'
 
 import Books from './components/Books'
 import BooksUsed from './components/BooksUsed'
@@ -24,6 +25,7 @@ import Private from './routes/Private'
 import BookState from './context/Book/BookState'
 import BookUsedState from './context/Book-used/BookUsedState'
 import UserState from './context/User/UserState'
+
 
 
 
@@ -53,6 +55,9 @@ const Router = () => {
 							<Route path="books/crear" element={<Create/>}/>
 							{/* localhost:3000/books/edit */}
 							<Route path="books/:id/editar" element={<EditBook/>}/>
+							{/* localhost:3000/cart */}
+							<Route path="cart" element={<Cart/>}/>
+						
 							{/* localhost:3000/booksUsed */}
 							<Route path="booksUsed" element={<BooksUsed/>}/>
 							{/* localhost:3000/booksUsed/:id */}

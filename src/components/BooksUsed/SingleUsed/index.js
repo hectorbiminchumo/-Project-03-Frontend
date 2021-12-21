@@ -2,29 +2,55 @@ import React, { useContext, useEffect } from "react";
 import BookUsedContext from "../../../context/Book-used/BookUsedContext";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import UserContext from "../../../context/User/UserContext"
 
 export default function SingleUsed() {
   
   const ctx = useContext(BookUsedContext);
-  const { getBookUsed, singleBookUsed } = ctx;
+  const { getBookUsed, singleBookUsed, deleteBookUsed } = ctx;
   const params = useParams();
   const id = params.id;
+
+  const userCtx = useContext(UserContext)
+  const { currentUser} = userCtx;
   useEffect(() => {
     getBookUsed(id);
   }, []);
   return (
     <>
       <div>
-        <div class="mt-4 flex md:mt-0">
-          <Link to={`/booksUsed/${id}/editar`}>
-            <button
-              type="button"
-              class="ml-3 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              Editar book
-            </button>
-          </Link>
-        </div>
+      { currentUser.admin ?
+
+<>
+
+  <div class="mt-4 flex md:mt-0">
+    <Link to={`/booksUsed/${id}/editar`}>
+      <button
+        type="button"
+        class="ml-3 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      >
+        Editar book
+      </button>
+    </Link>
+  </div>
+  <div class="mt-4 flex md:mt-0">
+    
+      <button onClick={() => deleteBookUsed(id)}
+        type="button"
+        class="ml-3 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      >
+        Delete book
+      </button>
+    
+  </div>
+
+  </>
+  :
+  <>
+  
+  </>
+
+}
 
         <div className="bg-white">
           <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">

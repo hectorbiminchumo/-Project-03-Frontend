@@ -599,7 +599,7 @@ export default function Profile() {
           </a>
         </h3>
         <p class="mt-1 text-lg font-medium">
-          <span class="text-indigo-600">Out for delivery</span>
+          <span class="text-[#557C55]">Out for delivery</span>
         </p>
       </div>
 

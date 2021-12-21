@@ -94,6 +94,11 @@ const BookUsedState = (props) => {
 
 	}
 
+	const deleteBookUsed = async (idBook) => {
+
+		const res = await axiosClient.delete(`booksUsed/delete/${idBook}` )
+
+	}
 
 	// 4. RETORNO
 	return (
@@ -106,7 +111,8 @@ const BookUsedState = (props) => {
 				getBooksUsed,
 				getBookUsed,
 				createBookUsed,
-				updateBookUsed
+				updateBookUsed,
+				deleteBookUsed
 			}}
 		>
 			{props.children}

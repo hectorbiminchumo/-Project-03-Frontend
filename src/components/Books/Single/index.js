@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import BookContext from "../../../context/Book/BookContext";
 import { useParams } from "react-router-dom";
 import { Link, Navigate } from "react-router-dom";
+import UserContext from "../../../context/User/UserContext"
 
 export default function Single() {
   
@@ -9,6 +10,9 @@ export default function Single() {
   const { getBook, singleBook, deleteBook } = ctx;
   const params = useParams();
   const id = params.id;
+
+  const userCtx = useContext(UserContext)
+  const { currentUser} = userCtx;
   // con params se obtiene el id del libro
   useEffect(() => {
     getBook(id);
@@ -16,6 +20,11 @@ export default function Single() {
   return (
     <>
       <div>
+
+      { currentUser.admin ?
+
+      <>
+
         <div class="mt-4 flex md:mt-0">
           <Link to={`/books/${id}/editar`}>
             <button
@@ -37,6 +46,13 @@ export default function Single() {
           
         </div>
 
+        </>
+        :
+        <>
+        
+        </>
+
+      }
         <div className="bg-white">
           <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
             <div className="lg:max-w-lg lg:self-end">

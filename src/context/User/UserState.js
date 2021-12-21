@@ -16,7 +16,8 @@ const UserState = (props) => {
 			pais: "",
 			direccion: "",
 			email: "",
-			password: ""
+			password: "",
+			admin:""
 		},
 		authStatus: false
 	}

@@ -2,22 +2,22 @@
 
 import React, { useState, useContext, useEffect } from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
-import BookContext from "../../../context/Book/BookContext";
+import BookUsedContext from "../../../context/Book-used/BookUsedContext";
 
 
-export default function Edit() {
+export default function EditUsed() {
   // 1. ESTADO GLOBAL
   const params = useParams();
-  const idBook = params.id;
+  const idBookUsed = params.id;
 
-  const ctx = useContext(BookContext);
+  const ctx = useContext(BookUsedContext);
 console.log(ctx);
 
-  const { singleBook, getBook, updateBook } = ctx;
+  const { singleBookUsed, getBookUsed, updateBookUsed } = ctx;
 
   // 2. ESTADO LOCAL
 
-  const [bookData, setBookData] = useState({
+  const [bookUsedData, setBookUsedData] = useState({
     title: "",
     author: "",
     description: "",
@@ -31,14 +31,14 @@ console.log(ctx);
 
   // USEEFFECT PARA ACTUALIZAR DATOS EN EL ESTADO GLOBAL
   useEffect(() => {
-    getBook(idBook);
+    getBookUsed(idBookUsed);
   }, []);
 
   // USEEFFECT PARA ACTUALIZAR LOS DATOS DEL ESTADO GLOBAL AL ESTADO LOCAL
   useEffect(() => {
-    const { title, author, description, image, price, condition, pages } = ctx.singleBook;
+    const { title, author, description, image, price, condition, pages } = ctx.singleBookUsed;
 
-    setBookData({
+    setBookUsedData({
       title: title,
       author: author,
       description: description,
@@ -47,13 +47,13 @@ console.log(ctx);
       condition: condition,
       pages:pages
     });
-  }, [singleBook]);
+  }, [singleBookUsed]);
 
   const handleChange = (e) => {
     e.preventDefault();
 
-    setBookData({
-      ...bookData,
+    setBookUsedData({
+      ...bookUsedData,
       [e.target.name]: e.target.value,
     });
   };
@@ -61,7 +61,7 @@ console.log(ctx);
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    updateBook(bookData, idBook)
+    updateBookUsed(bookUsedData, idBookUsed)
   };
 
   return (
@@ -94,7 +94,7 @@ console.log(ctx);
                   }}
                   type="text"
                   name="title"
-                  value={bookData.title}
+                  value={bookUsedData.title}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -111,7 +111,7 @@ console.log(ctx);
                   }}
                   type="text"
                   name="author"
-                  value={bookData.author}
+                  value={bookUsedData.author}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -127,7 +127,7 @@ console.log(ctx);
                     handleChange(event);
                   }}
                   type="text"
-                  value={bookData.description}
+                  value={bookUsedData.description}
                   name="description"
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-6 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
@@ -145,7 +145,7 @@ console.log(ctx);
                   }}
                   type="number"
                   name="price"
-                  value={bookData.price}
+                  value={bookUsedData.price}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -164,7 +164,7 @@ console.log(ctx);
                   name="condition"
                   class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 >
-                  <option value={"New"}>New</option>
+                  <option value={"Used"}>Used</option>
                   
                 </select>
               </div>
@@ -182,7 +182,7 @@ console.log(ctx);
                   onChange={(event) => {
                     handleChange(event);
                   }}
-                  value={bookData.image}
+                  value={bookUsedData.image}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -200,7 +200,7 @@ console.log(ctx);
                   }}
                   type="number"
                   name="pages"
-                  value={bookData.pages}
+                  value={bookUsedData.pages}
                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>

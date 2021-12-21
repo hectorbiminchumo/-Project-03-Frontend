@@ -16,6 +16,8 @@ import SingleUsed from "./components/BooksUsed/SingleUsed";
 import Create from "./components/Books/Create";
 import CreateUsed from "./components/BooksUsed/CreateUsed";
 import EditBook from "./components/Books/Single/Edit";
+import EditUsed from "./components/BooksUsed/SingleUsed/EditUsed";
+
 import Auth from "./routes/Auth";
 import Private from "./routes/Private";
 
@@ -60,6 +62,8 @@ const Router = () => {
                   <Route path="booksUsed/:id" element={<SingleUsed />} />
                   {/* localhost:3000/booksUsed/crear */}
                   <Route path="booksUsed/crear" element={<CreateUsed />} />
+                  {/* localhost:3000/books/edit */}
+                  <Route path="booksUsed/:id/editar" element={<EditUsed />} />
 
                   {/* localhost:3000/profile */}
                   <Route

@@ -91,7 +91,7 @@ const BookState = (props) => {
 			type: "UPDATE_BOOK",
 			payload: updatedBook
 		})
-		alert('Saved Changes!');
+		// alert('Saved Changes!');
     	window.location.replace('/books');
 
 

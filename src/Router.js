@@ -42,9 +42,9 @@ const Router = () => {
 							{/* localhost:3000/ */}
 							<Route index element={<Home />} />
 							{/* localhost:3000/registro */}
-							<Route path="registro" element={<Auth component={Register}/>}/>
+							<Route path="signup" element={<Auth component={Register}/>}/>
 							{/* localhost:3000/iniciar-sesion */}
-							<Route path="iniciar-sesion" element={<Auth component={Login}/>}/>
+							<Route path="login" element={<Auth component={Login}/>}/>
 							{/* localhost:3000/books */}
 							<Route path="books" element={<Books/>}/>
 							{/* localhost:3000/books/:id */}

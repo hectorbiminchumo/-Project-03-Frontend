@@ -42,13 +42,13 @@ export default function Login() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <img className="mx-auto h-12 w-auto" src="https://cdn.worldvectorlogo.com/logos/ironhack-1.svg" alt="Workflow" />
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Iniciar sesión
+          Log in
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          ¿Aún sin cuenta? &nbsp;
-          <Link to="/registro">
+          No account? &nbsp;
+          <Link to="/signup">
             <a className="font-medium text-yellow-500 hover:text-yellow-300">
-              Regístrate aquí.
+              Create one!
             </a>
           </Link>
         </p>
@@ -62,7 +62,7 @@ export default function Login() {
           >
             <div>
               <label for="email" className="block text-sm font-medium text-gray-700">
-                Tu correo electrónico
+                Email
               </label>
               <div className="mt-1">
                 <input
@@ -75,7 +75,7 @@ export default function Login() {
 
             <div>
               <label for="password" className="block text-sm font-medium text-gray-700">
-                Tu contraseña
+                Password
               </label>
               <div className="mt-1">
                 <input 
@@ -89,7 +89,7 @@ export default function Login() {
 
             <div>
               <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                Acceder a tu cuenta
+                Log in
               </button>
             </div>
           </form>

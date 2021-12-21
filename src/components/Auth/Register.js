@@ -46,13 +46,13 @@ export default function Register() {
 			<div className="sm:mx-auto sm:w-full sm:max-w-md">
 				<img className="mx-auto h-12 w-auto" src="https://cdn.worldvectorlogo.com/logos/ironhack-1.svg" />
 				<h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-					Crea tu cuenta
+					Sign up
 				</h2>
 				<p className="mt-2 text-center text-sm text-gray-600">
-					¿Ya tienes cuenta? &nbsp;
-					<Link to="/iniciar-sesion">
+					Have an account? &nbsp;
+					<Link to="/login">
 						<a className="font-medium text-yellow-500 hover:text-yellow-300">
-							Inicia sesión.
+							Log in
 						</a>
 					</Link>
 				</p>
@@ -65,7 +65,7 @@ export default function Register() {
 					className="space-y-6">
 						<div>
 							<label for="email" className="block text-sm font-medium text-gray-700">
-								Tu correo electrónico
+								Email
 							</label>
 							<div className="mt-1">
 								<input
@@ -144,7 +144,7 @@ export default function Register() {
 							</div>
 						</div>
 						<div>
-							<button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+							<button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#557C55] hover:bg-[#A6CF98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
 								Sign up
 							</button>
 						</div>

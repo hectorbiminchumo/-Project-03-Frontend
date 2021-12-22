@@ -31,7 +31,7 @@ function Home() {
   }
   ```
 --> */}
-<div class="bg-white">
+<div class="bg-white mt-20">
   <div class=" overflow-hidden">
     
     <main>

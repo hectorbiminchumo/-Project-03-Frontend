@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex flex-wrap">
+      <header className="flex flex-wrap fixed top-0 left-0 right-0">
         <nav className="flex w-screen justify-between bg-[#F2FFE9] text-gray-700">
           <div className="w-full xl:px-12 py-6 px-5 flex space-x-12 items-center ">
             <Link className="text-2xl font-bold" to="/">
@@ -52,7 +52,7 @@ export default function Header() {
               <Link to="/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-6 pt-1  text-gray-400 hover:text-gray-600 transition duration-100 cursor-pointer"
+                  className="ml-5 h-8 w-6 pt-1  text-gray-400 hover:text-gray-600 transition duration-100 cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

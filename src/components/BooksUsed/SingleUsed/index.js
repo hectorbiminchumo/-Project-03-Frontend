@@ -83,7 +83,7 @@ export default function SingleUsed() {
               </nav>
               <div className="mt-4">
                 <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  {singleBookUsed.nombre}
+                  {singleBookUsed.title}
                 </h1>
               </div>
               <section aria-labelledby="information-heading" className="mt-4">

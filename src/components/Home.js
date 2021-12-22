@@ -32,7 +32,7 @@ function Home() {
   ```
 --> */}
 <div class="bg-white">
-  <div class="relative overflow-hidden">
+  <div class=" overflow-hidden">
     
     <main>
       <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
@@ -82,7 +82,7 @@ function Home() {
       </div>
 
       {/* <!-- Feature section with screenshot --> */}
-      <div class="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
+      <div class=" bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
         <div class="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
           <div>
             <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Serverless</h2>
@@ -100,7 +100,7 @@ function Home() {
       </div>
 
       {/* <!-- Feature section with grid --> */}
-      <div class="relative bg-white py-16 sm:py-24 lg:py-32">
+      <div class=" bg-white py-16 sm:py-24 lg:py-32">
         <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
           <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Deploy faster</h2>
           <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
@@ -233,7 +233,7 @@ function Home() {
       {/* <!-- Testimonial section --> */}
       <div class="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
         <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
-          <div class="relative lg:-my-8">
+          <div class=" lg:-my-8">
             <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
             <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
               <div class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
@@ -260,8 +260,8 @@ function Home() {
       </div>
 
       {/* <!-- Blog section --> */}
-      <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
-        <div class="relative">
+      <div class=" bg-gray-50 py-16 sm:py-24 lg:py-32">
+        <div class="">
           <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
             <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Learn</h2>
             <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
@@ -420,12 +420,12 @@ function Home() {
       </div>
 
       {/* <!-- CTA Section --> */}
-      <div class="relative bg-gray-900">
-        <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+      <div class=" bg-gray-900">
+        <div class=" h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100" alt=""/>
           <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply"></div>
         </div>
-        <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
+        <div class=" mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
           <div class="md:ml-auto md:w-1/2 md:pl-10">
             <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">
               Award winning support

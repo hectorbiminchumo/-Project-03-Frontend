@@ -42,23 +42,30 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
+
+            
             
 
-            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <div className="mr-12 font-bold">
             {currentUser.admin ?
             <>
-              Hello Admin
+              <p>Hello {currentUser.firstName}!</p>
+              <p>Admin</p>
+               
             </>
             :
             <>
-              
+            <>
+              Hello {currentUser.firstName}!
+            </>
             </>
             
             
             }
 
 
-
+            </div>
 
 
 
@@ -116,7 +123,7 @@ export default function Header() {
 								:
 								<>
 									
-                <div class="hidden md:flex md:items-center md:space-x-6">
+                <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
             <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-800">
               Log in
             </a>

@@ -25,20 +25,27 @@ export default function Header() {
                 alt="logo"
               />
             </Link>
-            <ul className="hidden md:flex mx-auto px-5 font-semibold space-x-12">
+            <ul className="hidden md:flex mx-auto px-5 font-semibold space-x-12  ">
               <li>
-                <Link className="hover:text-gray-900" to="/">
+                <Link className="hover:text-white " to="/">
+                <button className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#F2FFE9] to-[#F2FFE9] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-gray-700 hover:to-gray-700 hover:text-white">
                   Home
+                </button>
+                  
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-gray-900" to="/books">
+                <button className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#F2FFE9] to-[#F2FFE9] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-gray-700 hover:to-gray-700 hover:text-white">
                   New Books
+                </button>
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-gray-900" to="/booksUsed">
+                <button className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#F2FFE9] to-[#F2FFE9] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-gray-700 hover:to-gray-700 hover:text-white">
                   Used Books
+                </button>
                 </Link>
               </li>
             </ul>

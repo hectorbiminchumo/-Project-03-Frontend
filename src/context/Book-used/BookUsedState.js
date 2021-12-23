@@ -77,6 +77,7 @@ const BookUsedState = (props) => {
 		const res = await axiosClient.post("booksUsed/create", form)
 
 		console.log(res)
+		window.location.replace('/booksUsed');
 
 	}
 
@@ -86,14 +87,23 @@ const BookUsedState = (props) => {
 
 		const updatedBookUsed = res.data.data
 
+		
+
 		dispatch({
 			type: "UPDATE_BOOKUSED",
 			payload: updatedBookUsed
 		})
 
+		window.location.replace('/booksUsed');
 
 	}
 
+	const deleteBookUsed = async (idBook) => {
+
+		const res = await axiosClient.delete(`booksUsed/delete/${idBook}` )
+
+		window.location.replace('/booksUsed');
+	}
 
 	// 4. RETORNO
 	return (
@@ -106,7 +116,8 @@ const BookUsedState = (props) => {
 				getBooksUsed,
 				getBookUsed,
 				createBookUsed,
-				updateBookUsed
+				updateBookUsed,
+				deleteBookUsed
 			}}
 		>
 			{props.children}

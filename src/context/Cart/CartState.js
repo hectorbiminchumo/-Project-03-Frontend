@@ -7,11 +7,11 @@ import BookReducer from './BookReducer'
 
 import axiosClient from "./../../config/axios"
 
-const BookState = (props) => {
+const CartState = (props) => {
 
 	// 1. INITIAL STATE (ESTADO INICIAL)
 	const initialState = {
-		books: [],
+		cartBooks: [],
 		singleBook: {
 			_id: "",
 			title: "",

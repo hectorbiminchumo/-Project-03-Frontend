@@ -1,4 +1,4 @@
-// ./client/src/Layout/Header.js
+
 import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../context/User/UserContext";
@@ -14,9 +14,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex flex-wrap">
-        <nav className="flex w-screen justify-between bg-[#F2FFE9] text-gray-700">
+      <header className=" relative flex flex-wrap  ">
+        <nav className="flex w-screen justify-between bg-gradient-to-r from-green-0 to-green-0 text-gray-700">
           <div className="w-full xl:px-12 py-6 px-5 flex space-x-12 items-center ">
+          
             <Link className="text-2xl font-bold" to="/">
               <img
                 className="h-12 w-auto"
@@ -43,16 +44,17 @@ export default function Header() {
             </ul>
             <div className="flex-grow border-0 border-green-0 py-1 px-3 lg:flex justify-between round hidden">
               <input
-                className="flex-grow text-gray-600 focus:outline-none"
+                className="flex-grow text-gray-600 focus:outline-none rounded-lg"
                 type="text"
                 placeholder="Search by Title or Author"
               />
               <span>
               {/* LUPA */}
               <Link to="/">
+              
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-6 pt-1  text-gray-400 hover:text-gray-600 transition duration-100 cursor-pointer"
+                  className="ml-5 h-8 w-6 pt-1  text-gray-400 hover:text-gray-600 transition duration-100 cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -69,6 +71,23 @@ export default function Header() {
             </div>
 
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            {currentUser.admin ?
+            <>
+              Hola admin
+            </>
+            :
+            <>
+              
+            </>
+            
+            
+            }
+
+
+
+
+
+
 						{
 							currentUser.firstName ?
               <>
@@ -96,7 +115,7 @@ export default function Header() {
               </Link>
 
               {/* //carrito */}
-              <Link className="flex items-center hover:text-gray-900" to="/registro">  
+              <Link className="flex items-center hover:text-gray-900" to="/cart">  
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -115,7 +134,7 @@ export default function Header() {
               </Link>
                 </div>
 
-                <a onClick={() => logoutUser()} href="/"  class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-yellow-700 hover:to-yellow-700">
+                <a onClick={() => logoutUser()} href="/"  class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#557C55] to-[#A6CF98] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-gray-700 hover:to-gray-700">
 										Logout
 									</a>
 
@@ -169,7 +188,7 @@ export default function Header() {
           </Link>
           <Link
             className="xl:hidden self-center mr-12 hover:text-gray-900"
-            to="/registro"
+            to="/"
           >
            
             <svg

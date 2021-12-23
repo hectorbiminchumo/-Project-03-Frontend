@@ -1,11 +1,7 @@
-import React from 'react'
-
-function Home() {
-    return (
-        <>
+<>
 
 
-<div class="mt-0 bg-white">
+<div class="mt-5 bg-white">
  
 
   <main>
@@ -44,7 +40,15 @@ function Home() {
             <div>
 
       {/* ESTE ES EL INICIO DEL TAILWIND */}
-        
+          
+
+
+      
+    
+      
+      
+      
+    
   
 
           
@@ -55,7 +59,6 @@ function Home() {
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
@@ -137,7 +140,6 @@ function Home() {
                     className="w-full align-middle rounded-t-lg"
                   />
                   <blockquote className="relative p-8 mb-4">
-                  
                     <svg
                       preserveAspectRatio="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -150,10 +152,9 @@ function Home() {
                     >
                       <polygon
                         points="-30,95 583,95 583,65"
-                        className="text-green-600 fill-current"
+                        className="text-pink-600 fill-current"
                       ></polygon>
                     </svg>
-                    
                     <h4 className="text-xl font-bold text-white">
                       Top Notch Services
                     </h4>
@@ -206,7 +207,7 @@ function Home() {
           </div>
           <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img class="w-full object-cover h-48 w-96 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://ridgewater.edu/wp-content/uploads/2020/08/RotatorImage_Bookstore.jpg" alt="Customer profile user interface"/>
+              <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" alt="Customer profile user interface"/>
             </div>
           </div>
         </div>
@@ -233,9 +234,9 @@ function Home() {
               </span>
             </div>
             <div class="mt-6">
-              <h3 class="text-lg font-medium text-white">Only Books</h3>
+              <h3 class="text-lg font-medium text-white">Unlimited Inboxes</h3>
               <p class="mt-2 text-base text-purple-200">
-              "Any format, edition, and condition; right at your fingertips."
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
               </p>
             </div>
           </div>
@@ -250,27 +251,9 @@ function Home() {
               </span>
             </div>
             <div class="mt-6">
-              <h3 class="text-lg font-medium text-white">Power</h3>
+              <h3 class="text-lg font-medium text-white">Manage Team Members</h3>
               <p class="mt-2 text-base text-purple-200">
-              "We believe in the power of the written word.To capture our wonderment,and immerse us in endless stories and worlds.For the love of reading.For the love of books. OnlyBooks."
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                {/* <!-- Heroicon name: outline/trash --> */}
-                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                </svg>
-              </span>
-            </div>
-
-            <div class="mt-6">
-              <h3 class="text-lg font-medium text-white">Adventure</h3>
-              <p class="mt-2 text-base text-purple-200">
-              "We've got your next great adventure...New favorite recipe Affordable textbooks Rare treasures Perfect match or cozy afternoon."
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
               </p>
             </div>
           </div>
@@ -285,14 +268,97 @@ function Home() {
               </span>
             </div>
             <div class="mt-6">
-              <h3 class="text-lg font-medium text-white">Easy</h3>
+              <h3 class="text-lg font-medium text-white">Spam Report</h3>
               <p class="mt-2 text-base text-purple-200">
-              "At OnlyBooks, we make it easy for you to love books too."
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
               </p>
             </div>
           </div>
 
-          
+          <div>
+            <div>
+              <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                {/* <!-- Heroicon name: outline/pencil-alt --> */}
+                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-lg font-medium text-white">Compose in Markdown</h3>
+              <p class="mt-2 text-base text-purple-200">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                {/* <!-- Heroicon name: outline/document-report --> */}
+                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-lg font-medium text-white">Team Reporting</h3>
+              <p class="mt-2 text-base text-purple-200">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                {/* <!-- Heroicon name: outline/reply --> */}
+                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-lg font-medium text-white">Saved Replies</h3>
+              <p class="mt-2 text-base text-purple-200">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                {/* <!-- Heroicon name: outline/chat-alt --> */}
+                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-lg font-medium text-white">Email Commenting</h3>
+              <p class="mt-2 text-base text-purple-200">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                {/* <!-- Heroicon name: outline/heart --> */}
+                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-lg font-medium text-white">Connect with Customers</h3>
+              <p class="mt-2 text-base text-purple-200">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -307,7 +373,36 @@ function Home() {
           </div>
         </div>
       </div>
-      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+        <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
+          <h2 class="text-sm font-semibold tracking-wide uppercase">
+            <span class="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">Valuable Metrics</span>
+          </h2>
+          <p class="mt-3 text-3xl font-extrabold text-white">Get actionable data that will help grow your business</p>
+          <p class="mt-5 text-lg text-gray-300">Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam sit tellus quis at.</p>
+          <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+            <p>
+              <span class="block text-2xl font-bold text-white">8K+</span>
+              <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Companies</span> use laoreet amet lacus nibh integer quis.</span>
+            </p>
+
+            <p>
+              <span class="block text-2xl font-bold text-white">25K+</span>
+              <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Countries around the globe</span> lacus nibh integer quis.</span>
+            </p>
+
+            <p>
+              <span class="block text-2xl font-bold text-white">98%</span>
+              <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Customer satisfaction</span> laoreet amet lacus nibh integer quis.</span>
+            </p>
+
+            <p>
+              <span class="block text-2xl font-bold text-white">12M+</span>
+              <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Issues resolved</span> lacus nibh integer quis.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     {/* <!-- CTA Section --> */}
@@ -317,7 +412,6 @@ function Home() {
           <span class="block">Ready to get started?</span>
           <span class="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Get in touch or create an account.</span>
         </h2>
-        
         <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
           <a href="#" class="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700">
             Learn more
@@ -336,12 +430,13 @@ function Home() {
 
 
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F2FFE9" fill-opacity="1" d="M0,32L80,53.3C160,75,320,117,480,112C640,107,800,53,960,74.7C1120,96,1280,192,1360,240L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+
+{/* ..TAILWIND */}
+
+
+
+
+
 
 
         </>
-        
-    )
-}
-
-export default Home

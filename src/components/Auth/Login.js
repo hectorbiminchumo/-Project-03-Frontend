@@ -38,7 +38,7 @@ export default function Login() {
 	}
 
 	return (
-		<div className="flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+		<div className="mt-20 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <img className="mx-auto h-12 w-auto" src="https://cdn.worldvectorlogo.com/logos/ironhack-1.svg" alt="Workflow" />
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">

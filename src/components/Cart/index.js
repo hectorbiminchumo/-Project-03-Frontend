@@ -130,7 +130,7 @@ function Cart() {
                   Subtotal
                 </dt>
                 <dd class="font-medium text-gray-900">
-                  $99.00
+                  $115.00
                 </dd>
               </div>
               <div class="py-4 flex items-center justify-between">
@@ -146,7 +146,7 @@ function Cart() {
                   Tax
                 </dt>
                 <dd class="font-medium text-gray-900">
-                  $8.32
+                  $8
                 </dd>
               </div>
               <div class="py-4 flex items-center justify-between">
@@ -154,7 +154,7 @@ function Cart() {
                   Order total
                 </dt>
                 <dd class="text-base font-medium text-gray-900">
-                  $112.32
+                  $128
                 </dd>
               </div>
             </dl>

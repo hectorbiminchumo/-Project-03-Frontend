@@ -590,12 +590,12 @@ export default function Profile() {
     <div class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
       <div class="group relative">
         <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
-          <img src="https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-01.jpg" alt="Black fabric shoe bag with zipper around 3 sides, holding pair of white sneakers." class="object-center object-cover"/>
+          <img className="w-full h-full object-contain h-100 w-200" src="https://images-na.ssl-images-amazon.com/images/I/51b7XbfMIIL.jpg" alt="Black fabric shoe bag with zipper around 3 sides, holding pair of white sneakers." class="object-center object-cover"/>
         </div>
         <h3 class="mt-4 text-sm text-gray-500">
           <a href="#">
             <span class="absolute inset-0"></span>
-            Kicks Carrier
+            Clean Code
           </a>
         </h3>
         <p class="mt-1 text-lg font-medium">
@@ -605,12 +605,12 @@ export default function Profile() {
 
       <div class="group relative">
         <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
-          <img src="https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-02.jpg" alt="Light grey canvas backpack with black handle, zipper, and edge details." class="object-center object-cover"/>
+          <img className="w-full h-full object-contain h-100 w-200" src="https://images-na.ssl-images-amazon.com/images/I/41oYsXjLvZL._SX348_BO1,204,203,200_.jpg" alt="Light grey canvas backpack with black handle, zipper, and edge details." class="object-center object-cover"/>
         </div>
         <h3 class="mt-4 text-sm text-gray-500">
           <a href="#">
             <span class="absolute inset-0"></span>
-            Micro Backpack
+            Cracking the Coding Interview
           </a>
         </h3>
         <p class="mt-1 text-lg font-medium">
@@ -620,12 +620,12 @@ export default function Profile() {
 
       <div class="group relative">
         <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
-          <img src="https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-03.jpg" alt="Orange canvas cylindrical bag with drawstring top, front zipper pouch, and black shoulder strap." class="object-center object-cover"/>
+          <img className="w-full h-full object-contain h-100 w-200" src="https://images-na.ssl-images-amazon.com/images/I/41-sN-mzwKL._SX258_BO1,204,203,200_.jpg" alt="Orange canvas cylindrical bag with drawstring top, front zipper pouch, and black shoulder strap." class="object-center object-cover"/>
         </div>
         <h3 class="mt-4 text-sm text-gray-500">
           <a href="#">
             <span class="absolute inset-0"></span>
-            Drawtop Canister
+            Clean Architecture
           </a>
         </h3>
         <p class="mt-1 text-lg font-medium">
@@ -635,12 +635,12 @@ export default function Profile() {
 
       <div class="group relative">
         <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
-          <img src="https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-04.jpg" alt="White canvas tote bag with black drawstring liner and white handle." class="object-center object-cover"/>
+          <img className="w-full h-full object-contain h-100 w-200" src="https://images-na.ssl-images-amazon.com/images/I/41-sN-mzwKL._SX258_BO1,204,203,200_.jpg" alt="White canvas tote bag with black drawstring liner and white handle." class="object-center object-cover"/>
         </div>
         <h3 class="mt-4 text-sm text-gray-500">
           <a href="#">
             <span class="absolute inset-0"></span>
-            High Wall Tote
+            Clean Architecture
           </a>
         </h3>
         <p class="mt-1 text-lg font-medium">

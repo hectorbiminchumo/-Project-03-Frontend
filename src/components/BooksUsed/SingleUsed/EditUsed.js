@@ -209,28 +209,24 @@ console.log(ctx);
             </div>
           </div>
           
-          <div class="flex justify-end pr-4 border mb-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
-            <div>
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            
             <button
               type="submit"
-              class="w-full bg-gray-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-black hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+              class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#557C55] to-[#A6CF98] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-gray-700 hover:to-gray-700"
             >
-              Save Book
+              Save
               
             </button>
-            </div>
-            <div>
-            <Link to="/booksUsed">
+            <Link to = "/booksUsed/idBook">
             <button
               type="button"
-              class="w-full  bg-gray-300 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-black hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+              class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#557C55] to-[#A6CF98] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-gray-700 hover:to-gray-700 "
             >
               Cancel
               
             </button>
             </Link>
-            </div>
-            
           </div>
           
         </div>

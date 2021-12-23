@@ -1,7 +1,7 @@
 //./src/components/Guitars/Single/Edit.js
 
 import React, { useState, useContext, useEffect } from "react";
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams,  Link } from "react-router-dom";
 import BookContext from "../../../context/Book/BookContext";
 
 
@@ -213,12 +213,20 @@ console.log(ctx);
             
             <button
               type="submit"
-              class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#557C55] to-[#A6CF98] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-gray-700 hover:to-gray-700"
             >
-              Save Book
+              Save
               
             </button>
-            
+            <Link to = "/books/idBook">
+            <button
+              type="button"
+              class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-[#557C55] to-[#A6CF98] bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-gray-700 hover:to-gray-700 "
+            >
+              Cancel
+              
+            </button>
+            </Link>
           </div>
           
         </div>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import BookContext from "../../../context/Book/BookContext";
 import { useParams } from "react-router-dom";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import UserContext from "../../../context/User/UserContext"
 import Comments from "../../Comments"
 
@@ -140,10 +140,10 @@ console.log(currentUser);
 <>
 
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-          <button type="button" class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to Cart</button>
+          <button type="button" class="w-full bg-[#557C55] border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-[#A6CF98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to Cart</button>
         
         <Link to="/books">
-          <button type="button" class="w-full bg-indigo-50 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">More Books</button>
+          <button type="button" class="w-full bg-[#F2FFE9] border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-[#557C55] hover:bg-[#A6CF98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">More Books</button>
           </Link>
         </div>
 

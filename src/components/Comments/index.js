@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { nanoid } from "nanoid";
+import UserContext from "../../context/User/UserContext"
+
+
 
 export default function Main() {
+
+const ctx = useContext(UserContext)
+const {currentUser} = ctx
+
+
+
+
   // 1. HOOKS
   const [newComment, setNewComment] = useState({
     title: "",
@@ -52,7 +62,7 @@ export default function Main() {
     e.preventDefault();
 
     if (!newComment.title.trim() || !newComment.description.trim()) {
-      setError("Debes rellenar los cuadros");
+      setError("Complete the information");
       return;
     }
 
@@ -91,7 +101,7 @@ export default function Main() {
     <>
       
       {/* FORMULARIO */}
-      <div className={edition ? "max-w-5xl mx-auto px-6 pb-6 sm:px-12 bg-yellow-100 rounded-md" : "max-w-5xl mx-auto px-6 sm:px-12" }>
+      <div className={edition ? "max-w-5xl mx-auto px-6 pb-6 sm:px-12 bg-[#F2FFE9] rounded-md" : "max-w-5xl mx-auto px-6 sm:px-12" }>
         <form onSubmit={edition ? editComment : addComment}>
           <h3 className="text-lg leading-6 font-medium text-gray-900 py-3">Title:</h3>
           <input
@@ -109,13 +119,13 @@ export default function Main() {
             value={newComment.description}
           />
           {edition ? 
-            ( <button className="inline-flex items-center max-h-12 px-3 my-4 py-2 border border-transparent text-sm leading-4 font-medium shadow-sm text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">Edit</button> ) 
+            ( <button class="mt-5 w-100 bg-[#557C55] border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-[#A6CF98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Edit</button> ) 
           : 
-            ( <button className="inline-flex items-center max-h-12 px-3 my-4 py-2 border border-transparent text-sm leading-4 font-medium shadow-sm text-white bg-green-700 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">Post</button> ) }  
+            ( <button class="mt-5 w-100 bg-[#557C55] border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-[#A6CF98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Post</button> ) }  
         </form>
 
         {error ? (
-          <div className="bg-yellow-50 p-4 my-4">
+          <div className="bg-[#F2FFE9] p-4 my-4">
           <div className="flex">
             <div className="flex-shrink-0">
               <svg
@@ -142,7 +152,7 @@ export default function Main() {
       {/* LISTADO DE COMENTARIOS */}
       <div className="max-w-5xl mx-auto px-6 sm:px-12">
       {comments.length === 0 ? (
-          <div className="bg-blue-50 p-4 my-4">
+          <div className="bg-[#F2FFE9] p-4 my-4">
             <div className="flex">
               <div className="flex-shrink-0">
               <svg className="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -150,7 +160,7 @@ export default function Main() {
               </svg>
               </div>
               <div className="ml-3">
-                <h3 className="whitespace-nowrap text-sm font-medium text-blue-800">Aún no has creado comentarios.</h3>
+                <h3 className="whitespace-nowrap text-sm font-medium text-blue-800">There is no comments yet.</h3>
               </div>
             </div>
           </div>
@@ -163,7 +173,8 @@ export default function Main() {
               key={i}
             >
               <div className="max-w-6xl">
-                <h3 className="text-lg leading-6 font-medium text-gray-900">{element.title}</h3>
+                <h2 className="mb-5 text-lg leading-6 font-medium text-gray-900">{currentUser.firstName} {currentUser.lastName}</h2>
+                <h3 className="text-sg leading-6 font-medium text-gray-900">{element.title}</h3>
                 <p className="mt-2 max-w-4xl text-sm text-gray-500">{element.description}</p>
               </div>
               <div className="mt-3 flex sm:mt-0 sm:ml-4">

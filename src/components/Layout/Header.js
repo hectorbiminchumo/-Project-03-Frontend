@@ -8,6 +8,8 @@ export default function Header() {
 
   const { currentUser, verifyingToken, logoutUser } = ctx;
 
+  console.log(currentUser.firstName);
+
   useEffect(() => {
     verifyingToken();
   }, []);
@@ -129,7 +131,7 @@ export default function Header() {
                </> 
 								:
 								<>
-									
+									<div className="-mt-8"> 
                 <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
             <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-800">
               Log in
@@ -137,6 +139,7 @@ export default function Header() {
             <a href="/signup" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-gray bg-gray-200 hover:bg-gray-300">
               Sign up
             </a>
+          </div>
           </div>
 
 								</>

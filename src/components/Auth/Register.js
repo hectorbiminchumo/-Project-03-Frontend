@@ -42,9 +42,9 @@ export default function Register() {
 
 
 	return (
-		<div className="mt-20 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+		<div className="mt-1 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
 			<div className="sm:mx-auto sm:w-full sm:max-w-md">
-				<img className="mx-auto h-12 w-auto" src="https://cdn.worldvectorlogo.com/logos/ironhack-1.svg" />
+				<img className="mx-auto h-24 w-auto" src="https://i.ibb.co/swtjXQW/Screen-Shot-2021-12-23-at-01-02-16-removebg-preview.png" />
 				<h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
 					Sign up
 				</h2>

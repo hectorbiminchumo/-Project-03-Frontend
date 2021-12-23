@@ -71,7 +71,7 @@ console.log(ctx);
           handleSubmit(event);
         }}
       >
-        <div class="shadow sm:rounded-md sm:overflow-hidden">
+        <div class="shadow mt-20 sm:rounded-md sm:overflow-hidden">
           <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>
               <h3 class="text-lg leading-6 font-medium text-gray-900">
@@ -209,15 +209,27 @@ console.log(ctx);
             </div>
           </div>
           
-          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-            
+          <div class="flex justify-end pr-4 border mb-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+            <div>
             <button
               type="submit"
-              class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              class="w-full bg-gray-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-black hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
             >
               Save Book
               
             </button>
+            </div>
+            <div>
+            <Link to="/booksUsed">
+            <button
+              type="button"
+              class="w-full  bg-gray-300 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-black hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+            >
+              Cancel
+              
+            </button>
+            </Link>
+            </div>
             
           </div>
           

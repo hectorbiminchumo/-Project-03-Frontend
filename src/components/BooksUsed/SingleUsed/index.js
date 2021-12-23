@@ -108,7 +108,7 @@ export default function SingleUsed() {
 <>
   <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
   
-    <Link to={`/books/${id}/editar`}>
+    <Link to={`/booksUsed/${id}/editar`}>
       <button
         type="button"
         class="w-full bg-[#557C55] border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-[#A6CF98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"

@@ -14,15 +14,15 @@ export default function Header() {
 
   return (
     <>
-      <header className=" relative flex flex-wrap  ">
-        <nav className="flex w-screen justify-between bg-gradient-to-r from-green-0 to-green-0 text-gray-700">
+      <header id="back" className=" relative flex flex-wrap  h-60 ">
+        <nav className="flex w-screen justify-between ">
           <div className="w-full xl:px-12 py-6 px-5 flex space-x-12 items-center ">
           
             <Link className="text-2xl font-bold" to="/">
               <img
-                className="h-12 w-auto"
+                className="h-24 w-auto"
                 src="https://i.ibb.co/HHy0wXh/IMG-1807.png" 
-                alt="algo"
+                alt="logo"
               />
             </Link>
             <ul className="hidden md:flex mx-auto px-5 font-semibold space-x-12">
@@ -33,7 +33,7 @@ export default function Header() {
               </li>
               <li>
                 <Link className="hover:text-gray-900" to="/books">
-                  Books
+                  New Books
                 </Link>
               </li>
               <li>
@@ -42,38 +42,12 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
-            <div className="flex-grow border-0 border-green-0 py-1 px-3 lg:flex justify-between round hidden">
-              <input
-                className="flex-grow text-gray-600 focus:outline-none rounded-lg"
-                type="text"
-                placeholder="Search by Title or Author"
-              />
-              <span>
-              {/* LUPA */}
-              <Link to="/">
-              
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-5 h-8 w-6 pt-1  text-gray-400 hover:text-gray-600 transition duration-100 cursor-pointer"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-                </Link>
-              </span>
-            </div>
+            
 
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             {currentUser.admin ?
             <>
-              Hola admin
+              Hello Admin
             </>
             :
             <>
@@ -207,7 +181,9 @@ export default function Header() {
             </svg>
             
           </Link>
+          
         </nav>
+        
       </header>
     </>
   );

@@ -42,3 +42,8 @@ code {
   margin-left: 50px;
   
 }
+
+#back{
+  background: url(./images/wave\ \(1\).svg);
+  background-size: cover;
+}
